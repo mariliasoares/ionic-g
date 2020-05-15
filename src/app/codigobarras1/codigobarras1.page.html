@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>codigobarras1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="EAN_8()">EAN 8</ion-button>
+  <ion-button (click)="EAN_13()">EAN 13</ion-button>
+  <ion-button (click)="EAN_14()">EAN 14</ion-button>
+  <ion-button (click)="QR_CODE()">QR CODE</ion-button>
+  <ion-item>
+    <ion-textarea type="text" [(ngModel)]="teste"></ion-textarea>
+  </ion-item>
+</ion-content>

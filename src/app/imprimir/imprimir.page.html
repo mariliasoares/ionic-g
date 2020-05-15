@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Imprimir</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="checarImpressora()">Checar Impressora</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="imprimirTexto()">Imprimir Texto</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="imprimirBarCode()">Imprimir BarCode</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="imprimirImagem()">Imprimir Imagem</ion-button>
+        
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="todasFunc()">Todas as Funcoes</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+    <!-- <ion-item>
+      <ion-textarea type="text" [(ngModel)]="temperatura"></ion-textarea>
+    </ion-item> -->
+  </ion-content>
+

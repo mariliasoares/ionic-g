@@ -1,5 +1,7 @@
 {
   "name": "GertecIonicAngular",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
