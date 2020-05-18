@@ -12,8 +12,9 @@ export class Codigobarras1Page implements OnInit {
   gpos700: any;
   resultadosBarCod: any;
   teste: any;
+  items = [];
 
-  constructor(private camera: Camera) { 
+  constructor() { 
     this.gpos700 = cordova.plugins.gpos7centos;
   }
 
@@ -24,10 +25,11 @@ export class Codigobarras1Page implements OnInit {
     // this.teste = this.gpos700.leitorCodigo1("EAN_8");
     // this.gpos700.leitorCodigo1("EAN_8");
     this.gpos700.leitorCodigo1({barCode: "EAN_8"}, (res) => {
-      console.log(JSON.stringify(res))
+      console.log(JSON.stringify(res));
+      this.items.push(res);
     }, (er) => 
     {
-      console.log(JSON.stringify(er))
+      this.items.push(er);
     });
   }
 
@@ -35,28 +37,30 @@ export class Codigobarras1Page implements OnInit {
     // this.teste = this.gpos700.leitorCodigo1("EAN_13");
     this.gpos700.leitorCodigo1({barCode: "EAN_13"}, (res) => {
       console.log(JSON.stringify(res))
+      this.items.push(res);
     }, (er) => 
     {
-      console.log(JSON.stringify(er))
+      this.items.push(er);
     });
   }
 
   EAN_14(){
     this.teste = this.gpos700.leitorCodigo1({barCode: "EAN_14"}, (res) => {
       console.log(JSON.stringify(res))
+      this.items.push(res);
     }, (er) => 
     {
-      console.log(JSON.stringify(er))
+      this.items.push(er);
     });
   }
 
   QR_CODE(){
     this.teste = this.gpos700.leitorCodigo1({barCode: "QR_CODE"}, (res) => {
       console.log(JSON.stringify(res))
+      this.items.push(res);
     }, (er) => 
     {
-      console.log(JSON.stringify(er))
+      this.items.push(er);
     });
   }
-
 }

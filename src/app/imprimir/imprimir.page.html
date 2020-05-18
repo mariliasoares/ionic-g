@@ -1,11 +1,11 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Imprimir</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
   <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h1>Funções Impressao G700/G800</h1>
+      </ion-col>
+    </ion-row>
+    <ion-input type="text" [(ngModel)]="mensagem" id="mensagem" placeholder="Escreva sua mensagem"></ion-input>
     <ion-row>
       <ion-col>
         <ion-button (click)="checarImpressora()">Checar Impressora</ion-button>
@@ -33,9 +33,5 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  
-    <!-- <ion-item>
-      <ion-textarea type="text" [(ngModel)]="temperatura"></ion-textarea>
-    </ion-item> -->
-  </ion-content>
+</ion-content>
 

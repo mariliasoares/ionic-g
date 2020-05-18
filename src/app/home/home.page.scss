@@ -33,3 +33,17 @@ ion-content ion-toolbar {
 ion-row {
   text-align: center;
 }
+
+.header {
+  margin-top: 20px;
+}
+
+h1 {
+  color: gray;
+  font-weight: bold;
+}
+
+ion-label h1 {
+  font-size: 20px;
+  font-weight: bold;
+}

@@ -22,23 +22,6 @@ export class HomePage {
       this.gpos700 = cordova.plugins.gpos7centos;
   }
 
-  startCamera() {
-    const options: CameraOptions = {
-      quality: 100,
-      destinationType: this.camera.DestinationType.DATA_URL,
-      encodingType: this.camera.EncodingType.JPEG,
-      mediaType: this.camera.MediaType.PICTURE
-    };
-
-    this.camera.getPicture(options).then((imageData) => {
-      this.temperatura = 40;
-    }, (err) => {
-
-    });
-    // this.temperatura = 40;
-
-  }
-
   codigobarras1() {
     this.router.navigate(['codigobarras1']);
   }
@@ -64,13 +47,6 @@ export class HomePage {
 
   nfcId() {
     // this.gpos700.leitorNfcId();
-  }
-
-  onSuccess() {
-    console.log('deu certo');
-  }
-  onFailure() {
-    console.log('deu merda');
   }
 
 }

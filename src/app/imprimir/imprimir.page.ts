@@ -9,7 +9,8 @@ declare var cordova;
 export class ImprimirPage implements OnInit {
   gpos700: any;
   teste: any;
-
+  mensagem: string;
+  
   constructor() {
     this.gpos700 = cordova.plugins.gpos7centos;
    }
